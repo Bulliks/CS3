@@ -1,0 +1,63 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000000;	
+}
+#contact {
+		
+			background-color: blue;
+			color: black;
+}
+ul {
+	transform: skewX(-7deg);
+	margin: 0;
+	padding: 0;
+}
+header {
+  background-color: #90EE90;
+  padding: 20px;
+  text-align: center;
+  font-size: 45px;
+  color: white;
+}
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #808080;
+  padding: 20px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #808080;
+  padding: 10px;
+}
+footer {
+  background-color: #90EE90;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+#grandslams/rolgar.html:hover {
+		
+			background-color: black;
+			color: yellow;
+  
+}
+article video{
+	width: 90%;
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
