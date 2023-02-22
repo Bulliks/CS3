@@ -1,0 +1,27 @@
+<DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Girl Or Boy?</title>
+			</head>		
+		<body>
+			<button onclick="girl()"> Barbie </button>
+			<button onclick="boy()"> Ken </button>
+				<br><br><br>
+			<img id="origpic" src="images/barbie.png" alt="Ken.jfif"></img>
+				<style>
+				img{
+					height:650px;
+					width:775px;
+				}
+				</style>
+			<script>
+			function girl(){
+				document.getElementById("origpic").src = "images/barbie.png";
+				}
+			function boy(){
+					document.getElementById("origpic").src = "images/Ken.jfif";
+			}
+		</script>
+	</body>
+</html>
