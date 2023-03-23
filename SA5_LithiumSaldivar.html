@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> My Online Shop</title>
+		<!-- type in the necessary meta tags -->
+		<style>
+		span {color: blue; text-decoration:underline}
+		button {width: 100px; padding: 5px; background: pink;}
+		</style>
+	
+	</head>
+	<body>
+		<h1> Welcome to the Item Shop </h1>
+		<h2> Please select from the following items </h2>
+		<!--- provide your own 3 items and their prices in the list --->
+		<ol>
+			<li> Kikiam: 12.00 </li>
+			<li> Hotdog: 79.99 </li>
+			<li> Hotdog with bun: 129.99 </li>
+		</ol>
+		<!-- the following will be used to display purchase information -->
+		<p> Item selected : <span id="item"> </span> </p>
+		<p> Qty bought : <span id="qty"> </span> </p>
+		<p> Amount to pay for the item: <span id="bill"> </span> </p>
+		<p> Current Total Bill <span id="tbill"> </span> </p>
+		<button onclick="buyItem()"> Buy an Item </button>
+		<button onclick="erase()"> Clear </button>
+		
+		<script>
+			/* do not forget to include comments in your answer */
+			var amount;
+			var itemSelected;
+			var price; 
+			// function used to buy items
+			function buyItem(){
+			// prompts the input of the user
+				itemSelected = parseInt(prompt("Enter the item number you would like to buy: ", "LEAVE"));
+				amount = parseInt(prompt("How much would you like to buy? : "));
+			//if, else if, and else statements in relation of whick the user picked
+				if(itemSelected==1){
+					document.getElementById("item").innerHTML = "kikiam/s";
+					document.getElementById("bill").innerHTML = "12 pesos";
+					price = 12;
+					}
+				else if(itemSelected==2){
+					document.getElementById("item").innerHTML = "Hotdog";
+					document.getElementById("bill").innerHTML = "79.99 pesos";
+					price = 79.99;
+					}
+				else if(itemSelected==3){
+					document.getElementById("item").innerHTML = "Hotdog with bun";
+					document.getElementById("bill").innerHTML = "129.99 pesos";
+					price = 129.99;
+					}
+				else{
+					document.getElementById("item").innerHTML = "Item is not available";
+					document.getElementById("bill").innerHTML = "N/A";
+					return 0;
+					}
+			// calculates the total price 
+				var totalBill = price*amount;
+			// outputs the total number of items and total bill
+				document.getElementById("qty").innerHTML = amount;
+				document.getElementById("tbill").innerHTML = totalBill + " Gold";
+				}
+			// clears the functions
+			function erase(){
+				document.getElementById("item").innerHTML = "";
+				document.getElementById("qty").innerHTML = " ";
+				document.getElementById("bill").innerHTML = " ";
+				document.getElementById("tbill").innerHTML = " ";
+				}
+		</script>
+	</body>
+
+</html>
