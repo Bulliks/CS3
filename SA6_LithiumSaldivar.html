@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>One Time Password(OTP) </title>
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            a {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+	<body onload="body()">
+	<h1> Final Verification Step </h1>
+	<h2> Current OTP: <span id="otp"> _ _ _ _ _ _ </span> <a onclick="newotp()" href=""> New OTP </a></h2>
+    <button onclick="otpbutton()"> Enter the OTP as shown above </button>
+	
+    
+	<script>
+	
+		/* this created a function that generates a string of predetermined-length random numerical characters. */
+
+		var generateOTP = (length = 4) => {
+			var otp = ''
+				
+			for (var i = 0; i < length; i++) {
+			otp += Math.floor(Math.random() * 10)
+		}
+
+		return otp
+		}
+		
+		var x;
+		
+		/* generating the 3 functions for onclick and onload */
+		function body(){
+		/* declared x as a random string */
+			x = generateOTP(6);
+			document.getElementById("otp").innerHTML = x;
+			}
+		
+		function newotp(){
+			document.getElementById("otp").innerHTML = x;
+			}
+		
+		function otpbutton(){
+			var y = prompt("Input your OTP");
+			if(y == x){
+				window.open("https://youtu.be/yU298eGARJQ");
+				/* opens the website when you enter the corrct otp code */
+				}
+			else{
+				alert("The OTP You Entered Is Incorrect");
+				body();
+				}
+			}
+
+    </script>
+</body>
+</html>
